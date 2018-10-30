@@ -7,6 +7,7 @@ var db = require('./database');
 var dbfunc = require('./db-function');
 var http  = require('http')
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var UserRoute = require('../app/routes/user.route');
 var AuthenticRoute = require('../app/routes/authentic.route');
@@ -27,6 +28,9 @@ dbfunc.connectionCheck.then((data) =>{
  }).catch((err) => {
      console.log(err);
  });
+
+app.use(cors());
+app.options('*', cors());
  
  app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
