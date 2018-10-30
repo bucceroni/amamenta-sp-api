@@ -1,7 +1,7 @@
 {
-  "name": "amamenta-backend",
+  "name": "amamenta-sp-api",
   "version": "1.0.7",
-  "description": "amamenta-backend",
+  "description": "amamenta-sp-api",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
